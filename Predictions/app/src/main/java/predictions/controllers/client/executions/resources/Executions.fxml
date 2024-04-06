@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0"
+            prefWidth="850.0" stylesheets="/predictions/controllers/client/executions/resources/Executions.css" xmlns="http://javafx.com/javafx/20.0.1"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="predictions.controllers.client.executions.ExecutionsController">
+    <AnchorPane layoutX="174.0" layoutY="354.0">
+        <Label alignment="CENTER" layoutY="5.0" prefHeight="31.0" prefWidth="208.0" text="Execution Results">
+            <font>
+                <Font name="Berlin Sans FB" size="28.0"/>
+            </font>
+        </Label>
+        <Separator layoutY="32.0" prefHeight="9.0" prefWidth="676.0"/>
+        <Separator prefHeight="9.0" prefWidth="676.0"/>
+        <LineChart fx:id="populationLineChart" createSymbols="false" layoutY="35.0" prefHeight="361.0"
+                   prefWidth="347.0" title="Population History">
+            <xAxis>
+                <CategoryAxis label="Ticks" side="BOTTOM"/>
+            </xAxis>
+            <yAxis>
+                <NumberAxis label="Population" side="LEFT"/>
+            </yAxis>
+        </LineChart>
+        <BarChart fx:id="propertiesBarChart" layoutX="348.0" layoutY="67.0" prefHeight="315.0" prefWidth="328.0"
+                  title="Property Histogram">
+            <xAxis>
+                <CategoryAxis label="Values" side="BOTTOM"/>
+            </xAxis>
+            <yAxis>
+                <NumberAxis label="Instances" side="LEFT"/>
+            </yAxis>
+        </BarChart>
+        <Label fx:id="consistencyLabel" layoutX="371.0" layoutY="381.0" text="Consistency:">
+            <font>
+                <Font name="Berlin Sans FB" size="13.0"/>
+            </font>
+        </Label>
+        <Label fx:id="averageLabel" layoutX="507.0" layoutY="381.0" text="Average:">
+            <font>
+                <Font name="Berlin Sans FB" size="13.0"/>
+            </font>
+        </Label>
+        <Label fx:id="consistencyValue" layoutX="440.0" layoutY="381.0" prefHeight="15.0" prefWidth="61.0"
+               text="234.45">
+            <font>
+                <Font name="Berlin Sans FB" size="13.0"/>
+            </font>
+        </Label>
+        <Label fx:id="averageValue" layoutX="561.0" layoutY="381.0" prefHeight="15.0" prefWidth="61.0"
+               text="234.45">
+            <font>
+                <Font name="Berlin Sans FB" size="13.0"/>
+            </font>
+        </Label>
+        <Separator layoutX="341.0" layoutY="35.0" orientation="VERTICAL" prefHeight="361.0" prefWidth="16.0"/>
+        <MenuButton fx:id="entitiesMenuButton" layoutX="347.0" layoutY="36.0" mnemonicParsing="false"
+                    text="Entities"/>
+        <MenuButton fx:id="propertiesMenuButton" layoutX="448.0" layoutY="35.0" mnemonicParsing="false"
+                    text="Properties"/>
+    </AnchorPane>
+    <AnchorPane layoutX="-1.0" prefWidth="149.0">
+        <Label alignment="CENTER" layoutX="1.0" prefHeight="25.0" prefWidth="174.0" text="Executions List">
+            <font>
+                <Font name="Berlin Sans FB" size="28.0"/>
+            </font>
+        </Label>
+        <Separator layoutX="1.0" layoutY="27.0" prefHeight="4.0" prefWidth="174.0"/>
+        <Separator layoutX="173.0" orientation="VERTICAL" prefHeight="750.0"/>
+        <Label alignment="CENTER" layoutX="1.0" layoutY="28.0" prefHeight="21.0" prefWidth="173.0" text="Running">
+            <font>
+                <Font name="Berlin Sans FB" size="18.0"/>
+            </font>
+        </Label>
+        <ListView fx:id="runningSimulationsListView" layoutY="48.0" prefHeight="342.0" prefWidth="175.0"/>
+        <Label alignment="CENTER" layoutY="390.0" prefHeight="15.0" prefWidth="174.0" text="Finished">
+            <font>
+                <Font name="Berlin Sans FB" size="18.0"/>
+            </font>
+        </Label>
+        <ListView fx:id="finishedSimulationsListView" layoutY="410.0" prefHeight="340.0" prefWidth="175.0"/>
+    </AnchorPane>
+    <AnchorPane layoutX="173.0">
+        <Label alignment="CENTER" layoutX="1.0" prefHeight="25.0" prefWidth="278.0" text="Execution Runtime Info">
+            <font>
+                <Font name="Berlin Sans FB" size="28.0"/>
+            </font>
+        </Label>
+        <Separator layoutX="1.0" layoutY="27.0" prefHeight="4.0" prefWidth="676.0"/>
+        <AnchorPane layoutY="28.0">
+            <Label alignment="CENTER" prefHeight="21.0" prefWidth="143.0" text="Runtime Progress"
+                   underline="true">
+                <font>
+                    <Font name="Berlin Sans FB" size="18.0"/>
+                </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="9.0" layoutY="27.0" prefHeight="21.0" prefWidth="50.0"
+                   text="Ticks">
+                <font>
+                    <Font name="Berlin Sans FB" size="18.0"/>
+                </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="9.0" layoutY="51.0" prefHeight="21.0" prefWidth="50.0"
+                   text="Time">
+                <font>
+                    <Font name="Berlin Sans FB" size="18.0"/>
+                </font>
+            </Label>
+            <ProgressBar fx:id="ticksProgressBar" layoutX="63.0" layoutY="29.0" prefWidth="193.0"
+                         progress="0.0"/>
+            <ProgressBar fx:id="timeProgressBar" layoutX="63.0" layoutY="55.0" prefWidth="193.0"
+                         progress="0.0"/>
+            <Label fx:id="ticksProgressLabel" alignment="CENTER" layoutX="258.0" layoutY="28.0"
+                   prefHeight="21.0" prefWidth="50.0" text="500">
+                <font>
+                    <Font name="Berlin Sans FB" size="18.0"/>
+                </font>
+            </Label>
+            <Label fx:id="timeProgressLabel" alignment="CENTER" layoutX="258.0" layoutY="52.0" prefHeight="21.0"
+                   prefWidth="50.0" text="500">
+                <font>
+                    <Font name="Berlin Sans FB" size="18.0"/>
+                </font>
+            </Label>
+        </AnchorPane>
+        <AnchorPane layoutX="1.0" layoutY="124.0">
+            <Label alignment="CENTER" prefHeight="21.0" prefWidth="117.0" text="Entities Count"
+                   underline="true">
+                <font>
+                    <Font name="Berlin Sans FB" size="18.0"/>
+                </font>
+            </Label>
+            <AnchorPane fx:id="entityCountLayout" layoutY="26.0" prefHeight="200.0" prefWidth="677.0"/>
+        </AnchorPane>
+        <AnchorPane layoutX="313.0" layoutY="28.0">
+            <Label fx:id="errorTitle" alignment="CENTER" prefHeight="21.0" prefWidth="115.0"
+                   text="Runtime Error" underline="true">
+                <font>
+                    <Font name="Berlin Sans FB" size="18.0"/>
+                </font>
+            </Label>
+            <TextArea fx:id="simulationErrorLabel" layoutX="5.0" layoutY="22.0" prefHeight="67.0"
+                      prefWidth="171.0" text="Runtime error" wrapText="true">
+                <font>
+                    <Font name="Berlin Sans FB" size="12.0"/>
+                </font>
+            </TextArea>
+        </AnchorPane>
+        <AnchorPane layoutX="490.0" layoutY="38.0">
+            <Button fx:id="reRunButton" layoutX="50.0" mnemonicParsing="false" prefHeight="31.0"
+                    prefWidth="82.0" styleClass="rerun" text="Re-Run!">
+                <font>
+                    <Font size="11.0"/>
+                </font>
+            </Button>
+            <Button fx:id="startButton" layoutY="45.0" mnemonicParsing="false" prefHeight="21.0"
+                    prefWidth="59.0" styleClass="control" text="Start">
+                <font>
+                    <Font size="11.0"/>
+                </font>
+            </Button>
+            <Button fx:id="pauseButton" layoutX="63.0" layoutY="45.0" mnemonicParsing="false" prefHeight="21.0"
+                    prefWidth="59.0" styleClass="control" text="Pause">
+                <font>
+                    <Font size="11.0"/>
+                </font>
+            </Button>
+            <Button fx:id="stopButton" layoutX="127.0" layoutY="45.0" mnemonicParsing="false" prefHeight="21.0"
+                    prefWidth="59.0" styleClass="control" text="Stop">
+                <font>
+                    <Font size="11.0"/>
+                </font>
+            </Button>
+        </AnchorPane>
+    </AnchorPane>
+</AnchorPane>

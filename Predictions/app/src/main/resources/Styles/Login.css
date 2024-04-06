@@ -1,0 +1,76 @@
+.login_container {
+    -fx-background-color: #EEEEEE;
+}
+
+/* Logo Container Styles */
+
+.login_logo_container {
+    -fx-background-color: rgba(181, 30, 50, 0.79);
+    -fx-alignment: center;
+    -fx-spacing: 7;
+}
+
+.login_logo_container Text {
+    -fx-font-size: 2.2em;
+    -fx-fill: #FFFFFF;
+    -fx-font-family: "Berlin Sans FB";
+}
+
+/* Account Selector choiceBox Styles */
+
+.account_selector {
+    -fx-background-color: #ECF39E;
+}
+
+.account_selector .label {
+    -fx-text-fill: rgba(181, 30, 50, 0.79);
+    -fx-font-size: 1.1em;
+}
+
+.account_selector .arrow {
+    -fx-text-fill: rgba(181, 30, 50, 0.79);
+}
+
+#choice-box-popup-menu {
+    -fx-background-color: #ECF39E;
+}
+
+/* Login Form Styles */
+
+/*#choice-prompt-text {*/
+/*    -fx-font-weight: 40;*/
+/*}*/
+.login_form_container {
+    -fx-spacing: 15;
+    -fx-alignment: top_left;
+
+}
+
+.login_form_container Label {
+    -fx-font-size: 1.1em;
+    -fx-font-weight: bold;
+}
+
+.input_field {
+    -fx-background-color: #FFFFFF;
+    -fx-pref-height: 35;
+    -fx-font-size: 1.2em;
+}
+
+.login_form_container Button {
+    -fx-background-color:  rgba(181, 30, 50, 0.79);
+    -fx-text-fill: #FFFFFF;
+    -fx-pref-width: 350;
+    -fx-pref-height: 30;
+    -fx-font-size: 1.5em;
+    -fx-font-family: "Berlin Sans FB";
+}
+
+.login_form_container Button:hover {
+    -fx-cursor: hand;
+    -fx-background-color: #fd8888;
+}
+
+.error_lbl {
+    -fx-text-fill: #FF0000;
+}

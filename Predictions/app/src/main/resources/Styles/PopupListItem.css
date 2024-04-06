@@ -1,0 +1,10 @@
+.popup-list-cell {
+    -fx-text-fill: white;
+    -fx-background-color: rgba(52, 152, 219, 0.78);
+    -fx-border-color: rgba(41, 128, 185, 0.53);
+    -fx-border-width: 1px;
+    -fx-alignment: center;
+    -fx-font-size: 14px;
+    -fx-padding: 5px;
+    -fx-min-width: 50px;
+}

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="750.0" prefWidth="850.0" styleClass="allocations_container" stylesheets="@../../../../Styles/Allocations.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="predictions.controllers.admin.allocations.AllocationsController">
+    <Text layoutX="401.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Allocations" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="380.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="14.0" />
+    <Text layoutX="383.0" layoutY="247.0" strokeType="OUTSIDE" strokeWidth="0.0" text="All Requests" wrappingWidth="107.2195261555828" AnchorPane.bottomAnchor="499.0" AnchorPane.leftAnchor="383.0" AnchorPane.rightAnchor="361.0" AnchorPane.topAnchor="229.0" />
+    <ListView fx:id="requestsListView" layoutX="21.0" layoutY="254.0" prefHeight="495.0" prefWidth="850.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="254.0" />
+    <Text layoutX="591.0" layoutY="246.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sort By:" wrappingWidth="67.99999088048935" />
+   <AnchorPane layoutY="38.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+               prefHeight="180.0" prefWidth="850.0" styleClass="new_query_container"
+               stylesheets="@../../../../Styles/Allocations.css">
+      <Button fx:id="filterButton" layoutX="662.0" layoutY="131.0" mnemonicParsing="false" prefHeight="35.0"
+              prefWidth="107.0" text="Filter"/>
+      <Text layoutX="24.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Search By:"
+            wrappingWidth="92.2195261555828"/>
+      <Text layoutX="43.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Client name:"
+            wrappingWidth="107.2195261555828"/>
+      <Text layoutX="43.0" layoutY="98.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Simulation name:"
+            wrappingWidth="163.2195261555828"/>
+      <MenuButton fx:id="clientNamesMenuButton" layoutX="218.0" layoutY="41.0" mnemonicParsing="false"
+                  text="All (Default)"/>
+      <MenuButton fx:id="simulationNameMenuButton" layoutX="218.0" layoutY="79.0" mnemonicParsing="false"
+                  text="All (Default)"/>
+      <AnchorPane layoutX="14.0" layoutY="122.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="54.0"
+                  prefWidth="171.0" styleClass="buttons_container">
+         <Button fx:id="approveButton" disable="true" layoutX="9.0" layoutY="10.0" mnemonicParsing="false"
+                 prefHeight="35.0" prefWidth="103.0" text="Approve"/>
+      </AnchorPane>
+      <AnchorPane layoutX="176.0" layoutY="122.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="54.0"
+                  prefWidth="171.0" styleClass="decline_container">
+         <Button fx:id="declineButton" disable="true" layoutX="9.0" layoutY="10.0" mnemonicParsing="false"
+                 prefHeight="35.0" prefWidth="103.0" text="Decline"/>
+      </AnchorPane>
+      <Text layoutX="387.0" layoutY="60.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Status:"
+            wrappingWidth="67.99999088048935"/>
+      <MenuButton fx:id="statusMenuButton" layoutX="465.0" layoutY="41.0" mnemonicParsing="false" text="All (Default)"/>
+   </AnchorPane>
+   <MenuButton fx:id="sortMenuButton" layoutX="686.0" layoutY="226.0" mnemonicParsing="false" text="Sort" />
+</AnchorPane>

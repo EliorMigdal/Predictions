@@ -1,0 +1,76 @@
+.white-background {
+    -fx-background-color: #fff;
+}
+
+.header-label {
+    -fx-padding: 5 0 0 20;/* Adjust the right margin (10 in this example) as needed */
+}
+
+#loadFileButton {
+    -fx-hbox-margin: 20 0 0 0; /* Top, Right, Bottom, Left */
+}
+
+.header-separator {
+    -fx-margin: 0 10 0 10;
+}
+
+.text-area .scroll-bar:vertical:disabled {
+    -fx-opacity: 0;
+}
+
+.transparent{
+    -fx-background-color: rgba(0,0,0,0);
+}
+
+.round-layout{
+    -fx-border-color: #D7D7D7;
+    -fx-border-radius: 50;
+}
+
+.selected{
+    -fx-background-color: #F3F3F3;
+}
+
+.mouse-moved:hover{
+    -fx-background-color: #E4E4E4;
+}
+
+.background-image {
+    -fx-background-image: url("../Images/whiteBackground.jpg");
+    -fx-background-size: 280 280;
+    -fx-effect: dropshadow(three-pass-box, grey, 10, 0.5, 0, 0);
+}
+
+.text-area .scroll-bar:vertical:disabled {
+    -fx-opacity: 0;
+}
+
+.background-image2 {
+    -fx-background-image: url("../Images/whiteBackground.jpg");
+    -fx-background-size: 320 320;
+    -fx-effect: dropshadow(three-pass-box, grey, 10, 0.5, 0, 0);
+}
+
+.root-borderpane {
+    -fx-padding: 20px;
+
+}
+.hover-container:hover .button {
+    -fx-color: -fx-hover-base;
+}
+
+/* override above rule for armed buttons */
+.hover-container:hover .button:armed {
+    -fx-color: -fx-pressed-base;
+}
+
+.costume_label{
+    -fx-fill: #000000;
+    -fx-font-size: 1.2em;
+    -fx-font-family: "Berlin Sans FB";
+}
+
+.simulationsContainer .list-view {
+    -fx-background-color: #EEEEEE;
+    -fx-padding: 10;
+}

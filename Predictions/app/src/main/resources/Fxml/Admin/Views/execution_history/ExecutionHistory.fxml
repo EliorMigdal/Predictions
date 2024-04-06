@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="750.0" prefWidth="850.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="predictions.controllers.admin.executions.ExecutionHistoryController">
+    <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="850.0">
+        <VBox prefHeight="788.0" prefWidth="178.0">
+            <Label alignment="CENTER" prefHeight="48.0" prefWidth="163.0" text="Execution list">
+                <font>
+                    <Font name="Berlin Sans FB" size="28.0" />
+                </font>
+                <VBox.margin>
+                    <Insets />
+                </VBox.margin>
+            </Label>
+            <VBox prefHeight="716.0" prefWidth="163.0" stylesheets="@../../../../Styles/Styles.css">
+                <styleClass>
+                    <String fx:value="transparent" />
+                    <String fx:value="white-background" />
+                </styleClass>
+                <Separator prefHeight="2.0" prefWidth="163.0" />
+                <VBox prefHeight="768.0" prefWidth="163.0">
+                    <Label alignment="CENTER" prefHeight="21.0" prefWidth="176.0" text="Finished">
+                        <font>
+                            <Font name="Berlin Sans FB" size="18.0" />
+                        </font>
+                        <padding>
+                            <Insets left="5.0" />
+                        </padding>
+                    </Label>
+                    <ScrollPane hbarPolicy="NEVER" prefHeight="761.0" prefWidth="163.0">
+                        <VBox prefHeight="570.0" prefWidth="161.0" styleClass="white-background" stylesheets="@../../../../Styles/Styles.css">
+                            <AnchorPane prefHeight="677.0" prefWidth="163.0" styleClass="white-background" stylesheets="@../../../../Styles/Styles.css">
+                        <ListView fx:id="finishedListView" prefHeight="677.0" prefWidth="163.0" />
+                            </AnchorPane>
+                        </VBox>
+                    </ScrollPane>
+                </VBox>
+            </VBox>
+        </VBox>
+        <VBox prefHeight="750.0" prefWidth="703.0" stylesheets="@../../../../Styles/Styles.css">
+            <styleClass>
+                <String fx:value="white-background" />
+                <String fx:value="transparent" />
+            </styleClass>
+            <VBox alignment="TOP_CENTER" prefHeight="750.0" prefWidth="717.0" stylesheets="@../../../../Styles/Styles.css">
+                <VBox.margin>
+                    <Insets />
+                </VBox.margin>
+                <VBox prefHeight="357.0" prefWidth="711.0">
+                    <HBox spacing="20.0">
+                        <VBox.margin>
+                            <Insets />
+                        </VBox.margin>
+                        <Label alignment="CENTER" prefHeight="41.0" prefWidth="267.0" text="Execution details">
+                            <font>
+                                <Font name="Berlin Sans FB" size="27.0" />
+                            </font>
+                            <padding>
+                                <Insets left="2.0" />
+                            </padding>
+                        </Label>
+                        <MenuButton fx:id="clientNameMenuButton" mnemonicParsing="false" prefHeight="28.0" prefWidth="106.0" text="Client Name">
+                            <HBox.margin>
+                                <Insets top="10.0" />
+                            </HBox.margin>
+                            <styleClass>
+                                <String fx:value="round-layout" />
+                                <String fx:value="mouse-moved" />
+                                <String fx:value="transparent" />
+                                <String fx:value="white-background" />
+                            </styleClass>
+                        </MenuButton>
+                        <MenuButton fx:id="requestIDMenuButton" mnemonicParsing="false" text="Request ID">
+                            <HBox.margin>
+                                <Insets top="10.0" />
+                            </HBox.margin>
+                            <styleClass>
+                                <String fx:value="transparent" />
+                                <String fx:value="white-background" />
+                                <String fx:value="mouse-moved" />
+                                <String fx:value="round-layout" />
+                            </styleClass>
+                        </MenuButton>
+                        <Button fx:id="showAllButton" mnemonicParsing="false" style="-fx-background-color: #00a100; -fx-border-color: rgb(107,107,107);" text="Show All" textFill="WHITE">
+                            <HBox.margin>
+                                <Insets top="10.0" />
+                            </HBox.margin>
+                            <styleClass>
+                                <String fx:value="button" />
+                                <String fx:value="mouse-moved" />
+                                <String fx:value="transparent" />
+                            </styleClass>
+                     <cursor>
+                        <Cursor fx:constant="OPEN_HAND" />
+                     </cursor>
+                        </Button>
+                    </HBox>
+                    <ScrollPane prefHeight="304.0" prefWidth="722.0">
+                        <HBox prefHeight="297.0" prefWidth="686.0" stylesheets="@../../../../Styles/Styles.css">
+                            <styleClass>
+                                <String fx:value="transparent" />
+                                <String fx:value="white-background" />
+                            </styleClass>
+                            <GridPane prefHeight="325.0" prefWidth="862.0">
+                                <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="252.3333740234375" minWidth="0.0" prefWidth="61.3333740234375" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="629.0" minWidth="10.0" prefWidth="619.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="215.0" minWidth="0.0" prefWidth="8.0" />
+                                </columnConstraints>
+                                <rowConstraints>
+                                    <RowConstraints maxHeight="107.0" minHeight="0.0" prefHeight="45.333343505859375" valignment="CENTER" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="91.66668701171875" minHeight="0.0" prefHeight="53.666656494140625" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="128.66668701171875" minHeight="10.0" prefHeight="54.66668701171875" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="168.33331298828125" minHeight="10.0" prefHeight="40.33331298828125" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="177.0" minHeight="10.0" prefHeight="165.66668701171875" vgrow="SOMETIMES" />
+                                </rowConstraints>
+                                <Label prefHeight="42.0" prefWidth="56.0" text="Ticks" GridPane.rowIndex="1">
+                                    <GridPane.margin>
+                                        <Insets left="10.0" />
+                                    </GridPane.margin>
+                                    <font>
+                                        <Font name="Berlin Sans FB" size="18.0" />
+                                    </font>
+                                </Label>
+                                <HBox GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                    <HBox prefHeight="53.0" prefWidth="323.0" spacing="4.0">
+                                        <ProgressBar fx:id="ticksProgressBar" prefWidth="193.0" progress="0.0">
+                                            <HBox.margin>
+                                                <Insets top="15.0" />
+                                            </HBox.margin>
+                                        </ProgressBar>
+                                        <Label fx:id="ticksProgressLabel" prefHeight="23.0" prefWidth="48.0" text="40">
+                                            <HBox.margin>
+                                                <Insets bottom="7.0" top="15.0" />
+                                            </HBox.margin>
+                                            <font>
+                                                <Font name="Berlin Sans FB" size="14.0" />
+                                            </font>
+                                        </Label>
+                                    </HBox>
+                                    <HBox prefHeight="53.0" prefWidth="323.0" spacing="4.0">
+                                        <TextArea fx:id="simulationErrorLabel" prefHeight="41.0" prefWidth="203.0" style="-fx-text-fill: red;" stylesheets="@../../../../Styles/Styles.css" wrapText="true">
+                                            <styleClass>
+                                                <String fx:value="transparent" />
+                                                <String fx:value="text-area" />
+                                            </styleClass>
+                                        </TextArea>
+                                    </HBox>
+                                </HBox>
+                                <Label prefHeight="76.0" prefWidth="68.0" text="Time" GridPane.rowIndex="2">
+                                    <font>
+                                        <Font name="Berlin Sans FB" size="18.0" />
+                                    </font>
+                                    <GridPane.margin>
+                                        <Insets left="10.0" />
+                                    </GridPane.margin>
+                                </Label>
+                                <HBox spacing="4.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                    <ProgressBar fx:id="timeProgressBar" prefWidth="193.0" progress="0.0">
+                                        <HBox.margin>
+                                            <Insets top="15.0" />
+                                        </HBox.margin>
+                                    </ProgressBar>
+                                    <Label fx:id="timeProgressLabel" prefHeight="23.0" prefWidth="48.0" text="40">
+                                        <HBox.margin>
+                                            <Insets bottom="7.0" top="15.0" />
+                                        </HBox.margin>
+                                        <font>
+                                            <Font name="Berlin Sans FB" size="14.0" />
+                                        </font>
+                                    </Label>
+                                </HBox>
+                                <HBox spacing="240.0" GridPane.columnIndex="1">
+                                    <Label prefHeight="36.0" prefWidth="61.0" text="gress:">
+                                        <font>
+                                            <Font name="Berlin Sans FB" size="20.0" />
+                                        </font>
+                                        <HBox.margin>
+                                            <Insets top="2.0" />
+                                        </HBox.margin>
+                                    </Label>
+                                    <Label fx:id="errorTitle" prefHeight="33.0" prefWidth="173.0" text="Simulation Error">
+                                        <font>
+                                            <Font name="Berlin Sans FB" size="24.0" />
+                                        </font>
+                                    </Label>
+                                </HBox>
+                                <Label alignment="CENTER_RIGHT" prefHeight="40.0" prefWidth="240.0" text="Pro">
+                                    <font>
+                                        <Font name="Berlin Sans FB" size="20.0" />
+                                    </font>
+                                </Label>
+                                <Label alignment="CENTER_RIGHT" prefHeight="40.0" prefWidth="240.0" text="Ent" GridPane.rowIndex="3">
+                                    <font>
+                                        <Font name="Berlin Sans FB" size="20.0" />
+                                    </font>
+                                </Label>
+                                <Label prefHeight="40.0" prefWidth="110.0" text="ities count:" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                    <font>
+                                        <Font name="Berlin Sans FB" size="20.0" />
+                                    </font>
+                                </Label>
+                                <ScrollPane hbarPolicy="NEVER" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                                    <VBox fx:id="entityCountLayout" alignment="TOP_CENTER" prefHeight="150.0" prefWidth="616.0" spacing="35.0" />
+                                </ScrollPane>
+                            </GridPane>
+                        </HBox>
+                    </ScrollPane>
+                </VBox>
+                <VBox prefHeight="405.0" prefWidth="781.0">
+                    <Label alignment="CENTER" prefHeight="41.0" prefWidth="261.0" text="Execution results">
+                        <font>
+                            <Font name="Berlin Sans FB" size="27.0" />
+                        </font>
+                        <padding>
+                            <Insets left="6.0" />
+                        </padding>
+                    </Label>
+                    <ScrollPane prefHeight="369.0" prefWidth="819.0">
+                  <content>
+                     <AnchorPane prefHeight="358.0" prefWidth="682.0">
+                        <children>
+                           <Line endX="368.0" fill="BLACK" layoutX="-23.0" startX="368.0" startY="359.0" stroke="#e1e1e1" />
+                           <LineChart fx:id="populationLineChart" layoutY="8.0" prefHeight="351.0" prefWidth="339.0" stylesheets="@../../../../Styles/LineChart.css" title="Population History">
+                             <xAxis>
+                               <CategoryAxis label="Ticks" side="BOTTOM" />
+                             </xAxis>
+                             <yAxis>
+                               <NumberAxis label="Population" side="LEFT" />
+                             </yAxis>
+                           </LineChart>
+                           <BarChart fx:id="propertiesBarChart" layoutX="345.0" layoutY="27.0" prefHeight="320.0" prefWidth="338.0" stylesheets="@../../../../Styles/BarChart.css" title="Property Histogram">
+                             <xAxis>
+                               <CategoryAxis label="Values" side="BOTTOM" />
+                             </xAxis>
+                             <yAxis>
+                               <NumberAxis label="Instances" side="LEFT" />
+                             </yAxis>
+                           </BarChart>
+                           <MenuButton fx:id="entitiesMenuButton" layoutX="346.0" mnemonicParsing="false" text="Entities">
+                              <styleClass>
+                                 <String fx:value="button" />
+                                 <String fx:value="mouse-moved" />
+                                 <String fx:value="round-layout" />
+                                 <String fx:value="transparent" />
+                              </styleClass>
+                           </MenuButton>
+                           <MenuButton fx:id="propertiesMenuButton" layoutX="434.0" mnemonicParsing="false" text="Properties">
+                              <styleClass>
+                                 <String fx:value="mouse-moved" />
+                                 <String fx:value="round-layout" />
+                                 <String fx:value="transparent" />
+                                 <String fx:value="button" />
+                              </styleClass>
+                           </MenuButton>
+                           <Label fx:id="consistencyLabel" layoutX="346.0" layoutY="345.0" text="Consistency:">
+                              <font>
+                                 <Font name="Berlin Sans FB" size="13.0" />
+                              </font>
+                           </Label>
+                           <Label fx:id="averageLabel" layoutX="482.0" layoutY="345.0" text="Average:">
+                              <font>
+                                 <Font name="Berlin Sans FB" size="13.0" />
+                              </font>
+                           </Label>
+                           <Label fx:id="consistencyValue" layoutX="415.0" layoutY="345.0" prefHeight="15.0" prefWidth="61.0" text="234.45">
+                              <font>
+                                 <Font name="Berlin Sans FB" size="13.0" />
+                              </font>
+                           </Label>
+                           <Label fx:id="averageValue" layoutX="536.0" layoutY="345.0" prefHeight="15.0" prefWidth="61.0" text="234.45">
+                              <font>
+                                 <Font name="Berlin Sans FB" size="13.0" />
+                              </font>
+                           </Label>
+                        </children>
+                     </AnchorPane>
+                  </content></ScrollPane>
+                </VBox>
+            </VBox>
+        </VBox>
+    </HBox>
+</AnchorPane>

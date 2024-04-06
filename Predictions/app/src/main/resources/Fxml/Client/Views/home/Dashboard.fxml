@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="750.0" prefWidth="850.0" styleClass="dashboard" stylesheets="@../../../../Styles/Dashboard.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="predictions.controllers.client.DashboardController">
+   <Text fx:id="user_name" layoutX="14.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="user_name" text="Hi, Ben" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="30.0" />
+   <Label fx:id="login_date" styleClass="date_lbl" text="Today, 30-09-2023" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="27.0" />
+   <Text layoutX="811.0" layoutY="103.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="section_title" text="Requests Summary" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="90.0" />
+   <Text layoutX="20.0" layoutY="112.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="section_title" text="Latest Requests" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="90.0" />
+   <HBox layoutX="39.0" layoutY="125.0" prefHeight="180.0" prefWidth="594.0" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="120.0">
+      <ListView fx:id="requests_listview" prefHeight="180.0" prefWidth="596.0" styleClass="transaction_listview" />
+   </HBox>
+   <VBox layoutX="735.0" layoutY="120.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="180.0" prefWidth="201.0" styleClass="summary_view" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="120.0">
+      <VBox prefHeight="172.0" prefWidth="223.0" styleClass="req_summary_container">
+         <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Waiting" />
+         <Label fx:id="waiting_lbl" styleClass="req_waiting" text="Label" />
+         <Line endX="100.0" startX="-100.0" />
+         <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Declined" />
+         <Label fx:id="declined_lbl" styleClass="req_declined" text="Label" />
+         <Line endX="100.0" startX="-100.0" />
+         <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Approved" />
+         <Label fx:id="approved_lbl" styleClass="req_approved" text="Label" />
+      </VBox>
+   </VBox>
+   <Text layoutX="13.0" layoutY="371.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="section_title" text="Latest Executions" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="340.0" />
+   <Text layoutX="741.0" layoutY="362.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="section_title" text="New Request" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="340.0" />
+   <ListView fx:id="executions_listview" layoutX="20.0" layoutY="371.0" prefHeight="365.0" prefWidth="570.0" styleClass="transaction_listview" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="20.0" />
+   <VBox layoutX="613.0" layoutY="371.0" prefHeight="366.0" prefWidth="263.0" styleClass="new_req_container" stylesheets="@../../../../Styles/Requests.css" AnchorPane.bottomAnchor="13.0" AnchorPane.rightAnchor="4.0">
+      <Label text="Simulation Name:" />
+      <ChoiceBox fx:id="simulations_choiceBox" prefWidth="150.0" />
+      <Label text="Amount:" />
+      <TextField fx:id="amount_fld" prefHeight="21.0" prefWidth="95.0" />
+      <Label text="Termination Term:" />
+      <HBox prefHeight="27.0" prefWidth="256.0" spacing="10.0">
+         <children>
+            <VBox spacing="5.0">
+               <children>
+                  <CheckBox fx:id="time_chbox" mnemonicParsing="false" text="By Time" />
+                  <TextField fx:id="time_term_fld" prefHeight="25.0" prefWidth="0.0" />
+               </children>
+            </VBox>
+            <VBox spacing="5.0">
+               <children>
+                  <CheckBox fx:id="ticks_chbox" mnemonicParsing="false" text="By Ticks" />
+                  <TextField fx:id="ticks_term_fld" prefHeight="25.0" prefWidth="54.0" />
+               </children>
+            </VBox>
+            <CheckBox fx:id="user_chbox" mnemonicParsing="false" text="By User" />
+         </children>
+      </HBox>
+      <Button fx:id="send_request_btn" mnemonicParsing="false" text="Send Request" />
+   </VBox>
+</AnchorPane>

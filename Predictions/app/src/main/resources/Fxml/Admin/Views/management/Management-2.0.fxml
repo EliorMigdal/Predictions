@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TreeView?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="750.0" prefWidth="850.0" styleClass="requests_container" stylesheets="@../../../../Styles/Requests.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="predictions.controllers.admin.management.ManagementController">
+   <HBox layoutX="10.0" layoutY="10.0" prefHeight="44.0" prefWidth="835.0" spacing="15.0">
+      <HBox alignment="CENTER_LEFT" spacing="15.0">
+         <ImageView fx:id="loadFileButton" fitHeight="37.0" fitWidth="38.0" style="-fx-cursor: hand;">
+            <Image url="@../../../../Images/loadFileImg.png" />
+         </ImageView>
+      </HBox>
+      <Region prefHeight="44.0" prefWidth="248.0" HBox.hgrow="ALWAYS" />
+      <HBox alignment="CENTER_RIGHT" maxHeight="-Infinity" prefHeight="35.0" prefWidth="342.0" spacing="10.0">
+         <TextArea fx:id="messageLabel" editable="false" prefHeight="44.0" prefWidth="302.0" styleClass="text-area" stylesheets="@../../../../Styles/Styles.css">
+            <font>
+               <Font name="Berlin Sans FB" size="15.0" />
+            </font>
+         </TextArea>
+      </HBox>
+   </HBox>
+   <AnchorPane layoutX="9.0" layoutY="54.0" prefHeight="653.0" prefWidth="832.0" styleClass="requests_container" stylesheets="@../../../../Styles/SimulationDetails.css">
+      <VBox layoutX="20.0" layoutY="221.0" prefHeight="468.0" prefWidth="380.0">
+         <Label alignment="CENTER" prefHeight="34.0" prefWidth="364.0" text="Simulation data list">
+            <font>
+               <Font name="Berlin Sans FB" size="31.0" />
+            </font>
+            <VBox.margin>
+               <Insets left="20.0" top="20.0" />
+            </VBox.margin>
+         </Label>
+         <VBox prefHeight="405.0" prefWidth="384.0" styleClass="white-background" stylesheets="@../../../../Styles/Styles.css">
+            <TreeView fx:id="elementTreeView" onMouseClicked="#getElementData" prefHeight="407.0" prefWidth="389.0" stylesheets="@../../../../Styles/Styles.css">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <effect>
+                  <Glow />
+               </effect>
+               <styleClass>
+                  <String fx:value="transparent" />
+                  <String fx:value="white-background" />
+               </styleClass>
+            </TreeView>
+         </VBox>
+      </VBox>
+      <VBox layoutX="404.0" layoutY="191.0" prefHeight="498.0" prefWidth="403.0">
+         <Label alignment="CENTER" prefHeight="45.0" prefWidth="366.0" text="ff">
+            <font>
+               <Font name="Berlin Sans FB" size="31.0" />
+            </font>
+            <VBox.margin>
+               <Insets left="20.0" top="20.0" />
+            </VBox.margin>
+            <padding>
+               <Insets top="30.0" />
+            </padding>
+         </Label>
+         <VBox fx:id="propertiesLayout" alignment="TOP_CENTER" prefHeight="405.0" prefWidth="402.0" styleClass="white-background" stylesheets="@../../../../Styles/Styles.css">
+            <VBox.margin>
+               <Insets />
+            </VBox.margin>
+            <padding>
+               <Insets top="15.0" />
+            </padding>
+         </VBox>
+      </VBox>
+      <Text layoutX="277.0" layoutY="24.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Simulations information" AnchorPane.leftAnchor="277.0" AnchorPane.topAnchor="14.0" />
+      <ListView fx:id="simulationsListView" layoutY="45.0" prefHeight="194.0" prefWidth="833.0" />
+   </AnchorPane>
+</AnchorPane>

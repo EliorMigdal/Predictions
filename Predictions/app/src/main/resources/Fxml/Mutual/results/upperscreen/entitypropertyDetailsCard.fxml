@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="59.0" prefWidth="151.0" style="-fx-border-color: #191919;" stylesheets="@../../../../Styles/Styles.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="predictions.controllers.mutual.executions.items.EntityCountCellController">
+   <top>
+      <Label fx:id="entityName" alignment="CENTER" contentDisplay="CENTER" prefHeight="36.0" prefWidth="123.0" text="Healthy" BorderPane.alignment="CENTER">
+         <font>
+            <Font name="Berlin Sans FB" size="14.0" />
+         </font>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+      </Label>
+   </top>
+   <styleClass>
+      <String fx:value="transparent" />
+      <String fx:value="background-image" />
+   </styleClass>
+   <center>
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="15.0" BorderPane.alignment="CENTER">
+         <Label prefHeight="36.0" prefWidth="62.0" text="Count:">
+            <font>
+               <Font name="Berlin Sans FB" size="14.0" />
+            </font>
+         </Label>
+         <Label fx:id="entityCount" prefHeight="30.0" prefWidth="53.0" text="500">
+            <font>
+               <Font name="Berlin Sans FB" size="14.0" />
+            </font>
+         </Label>
+      </HBox>
+   </center>
+</BorderPane>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<HBox fx:id="tileBox" alignment="CENTER" prefHeight="57.0" prefWidth="161.0" spacing="15.0" style="-fx-cursor: hand;" styleClass="mouse-moved" stylesheets="@../../../../../Styles/Styles.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1">
+    <AnchorPane prefHeight="70.0" prefWidth="162.0">
+        <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="4.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="8.0" AnchorPane.rightAnchor="120.0" AnchorPane.topAnchor="18.0">
+            <image>
+                <Image url="@../../../../../Images/executeImg.png" />
+            </image>
+        </ImageView>
+        <VBox layoutX="50.0" layoutY="8.0" prefHeight="71.0" prefWidth="106.0" AnchorPane.bottomAnchor="1.0" AnchorPane.topAnchor="1.0">
+            <VBox style="-fx-background-color: rgba(181, 30, 50, 0.79);">
+                <Text fx:id="clientName" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: white;" text="Client name" />
+            </VBox>
+            <VBox style="-fx-background-color: #2A6FE7FF;">
+                <Text fx:id="requestID" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: white;" text="Request ID" />
+            </VBox>
+            <VBox style="-fx-background-color: #E78F28FF;">
+                <Text fx:id="simulationName" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: white;" text="Simulation name" />
+            </VBox>
+            <VBox style="-fx-background-color: #16650FFF;">
+                <Text fx:id="simulationID" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: white;" text="Simulation ID" wrappingWidth="105.228515625" />
+            </VBox>
+        </VBox>
+    </AnchorPane>
+</HBox>

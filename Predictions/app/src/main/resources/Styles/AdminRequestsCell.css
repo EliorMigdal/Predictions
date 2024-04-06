@@ -1,0 +1,39 @@
+.cell_container {
+    -fx-background-color: #FFFFFF;
+    -fx-background-radius: 10;
+    -fx-effect: dropshadow(three-pass-box,#000000,5,0,0,7);
+}
+
+.reqs_icon_container {
+    -fx-background-color: #FFFFFF;
+    -fx-alignment: center;
+    -fx-spacing: 5;
+}
+
+.cell_container Line {
+    -fx-stroke: #EEEEEE;
+}
+
+.reqs_date_lbl {
+    -fx-text-fill: #AAAAAA;
+}
+
+.reqs_amount_lbl {
+    -fx-text-fill: #000000;
+}
+
+.reqs_label {
+    -fx-background-color: rgba(0, 0, 0, 0.4);
+    -fx-background-radius: 2;
+    -fx-text-fill: #ffffff;
+    -fx-padding: 5;
+    -fx-font-weight: 700;
+}
+
+.reqs_request_status_value {
+    -fx-background-color: rgb(255, 234, 0);
+    -fx-background-radius: 2;
+    -fx-text-fill: #000000;
+    -fx-padding: 5;
+    -fx-font-weight: 700;
+}

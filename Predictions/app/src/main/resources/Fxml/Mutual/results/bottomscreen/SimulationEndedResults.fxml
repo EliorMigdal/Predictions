@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<HBox prefHeight="362.0" prefWidth="686.0" stylesheets="@../../../../Styles/Styles.css"
+      xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="predictions.controllers.mutual.results.bottomscreen.controller.SimulationEndedResultsController">
+    <styleClass>
+        <String fx:value="transparent"/>
+        <String fx:value="white-background"/>
+    </styleClass>
+    <VBox prefHeight="315.0" prefWidth="500.0">
+        <HBox.margin>
+            <Insets/>
+        </HBox.margin>
+        <LineChart fx:id="populationChart" createSymbols="false" prefHeight="361.0" prefWidth="400.0"
+                   stylesheets="@css/lineChart.css" title="Population History">
+            <xAxis>
+                <CategoryAxis label="Ticks" prefHeight="59.0" prefWidth="332.0" stylesheets="@css/lineChart.css">
+                    <tickLabelFont>
+                        <Font name="Berlin Sans FB" size="12.0"/>
+                    </tickLabelFont>
+                </CategoryAxis>
+            </xAxis>
+            <yAxis>
+                <NumberAxis label="Population" side="LEFT" stylesheets="@css/lineChart.css">
+                    <tickLabelFont>
+                        <Font name="Berlin Sans FB" size="12.0"/>
+                    </tickLabelFont>
+                </NumberAxis>
+            </yAxis>
+        </LineChart>
+    </VBox>
+    <Separator orientation="VERTICAL" prefHeight="200.0"/>
+    <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="361.0"
+          prefWidth="400.0" spacing="15.0">
+        <HBox prefHeight="29.0" prefWidth="400.0" spacing="20.0">
+            <MenuButton fx:id="entityNameDropDown" mnemonicParsing="false" prefHeight="29.0" prefWidth="120.0"
+                        text="Entities" textOverrun="CENTER_ELLIPSIS">
+                <items>
+                    <MenuItem mnemonicParsing="false" text="Action 1"/>
+                    <MenuItem mnemonicParsing="false" text="Action 2"/>
+                </items>
+                <styleClass>
+                    <String fx:value="button"/>
+                    <String fx:value="mouse-moved"/>
+                    <String fx:value="round-layout"/>
+                    <String fx:value="transparent"/>
+                </styleClass>
+                <font>
+                    <Font name="Berlin Sans FB" size="14.0"/>
+                </font>
+            </MenuButton>
+            <MenuButton fx:id="propertyNameDropDown" mnemonicParsing="false" prefHeight="29.0" prefWidth="120.0"
+                        text="Properties" textOverrun="CENTER_ELLIPSIS">
+                <items>
+                    <MenuItem mnemonicParsing="false" text="Action 1"/>
+                    <MenuItem mnemonicParsing="false" text="Action 2"/>
+                </items>
+                <styleClass>
+                    <String fx:value="button"/>
+                    <String fx:value="mouse-moved"/>
+                    <String fx:value="round-layout"/>
+                    <String fx:value="transparent"/>
+                </styleClass>
+                <font>
+                    <Font name="Berlin Sans FB" size="14.0"/>
+                </font>
+            </MenuButton>
+        </HBox>
+        <BarChart fx:id="barChart" prefHeight="304.0" prefWidth="400.0" stylesheets="@css/barChart.css"
+                  title="Property Histogram">
+            <xAxis>
+                <CategoryAxis prefHeight="28.0" prefWidth="323.0" tickLabelGap="5.0" tickLabelRotation="45.0">
+                    <tickLabelFont>
+                        <Font name="Berlin Sans FB" size="14.0"/>
+                    </tickLabelFont>
+                </CategoryAxis>
+            </xAxis>
+            <yAxis>
+                <NumberAxis label="Instances" prefHeight="179.0" prefWidth="47.0" side="LEFT">
+                    <tickLabelFont>
+                        <Font name="Berlin Sans FB" size="12.0"/>
+                    </tickLabelFont>
+                </NumberAxis>
+            </yAxis>
+        </BarChart>
+        <HBox prefHeight="32.0" prefWidth="400.0" spacing="20.0">
+            <Label fx:id="consistencyLabel" alignment="CENTER" prefHeight="53.0" prefWidth="103.0"
+                   text="Consistency:">
+                <font>
+                    <Font name="Berlin Sans FB" size="18.0"/>
+                </font>
+            </Label>
+            <Label fx:id="consistencyValue" alignment="CENTER" prefHeight="35.0" prefWidth="70.0">
+                <font>
+                    <Font name="Berlin Sans FB" size="18.0"/>
+                </font>
+            </Label>
+            <Label fx:id="averageLabel" alignment="CENTER" prefHeight="53.0" prefWidth="76.0" text="Average:">
+                <font>
+                    <Font name="Berlin Sans FB" size="18.0"/>
+                </font>
+            </Label>
+            <Label fx:id="averageValue" alignment="CENTER" prefHeight="35.0" prefWidth="70.0">
+                <font>
+                    <Font name="Berlin Sans FB" size="18.0"/>
+                </font>
+            </Label>
+        </HBox>
+    </VBox>
+</HBox>

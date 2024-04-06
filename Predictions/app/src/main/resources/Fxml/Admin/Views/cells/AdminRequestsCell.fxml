@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="requestsCell" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="60.0" prefWidth="820.0" styleClass="cell_container" stylesheets="@../../../../Styles/AdminRequestsCell.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <Label fx:id="dateLabel" layoutX="46.0" layoutY="23.0" styleClass="reqs_date_lbl" text="2023-01-10" />
+   <Label layoutX="134.0" layoutY="17.0" maxWidth="80.0" prefHeight="18.0" prefWidth="80.0" styleClass="reqs_label" text="Client Name:" />
+   <Label fx:id="clientNameLabel" layoutX="219.0" layoutY="23.0" maxWidth="-Infinity" prefHeight="17.0" prefWidth="48.0" styleClass="reqs_amount_lbl" text="Carlos" />
+   <Label layoutX="268.0" layoutY="17.0" maxWidth="146.0" styleClass="reqs_label" text="Request ID:" />
+   <VBox layoutY="5.0" prefHeight="50.0" prefWidth="50.0">
+      <Circle fx:id="selectionCircle" fill="#1f93ff00" radius="10.0" stroke="BLACK" strokeType="INSIDE"
+              strokeWidth="1.5" style="-fx-cursor: hand;">
+         <VBox.margin>
+            <Insets left="15.0" top="15.0"/>
+         </VBox.margin>
+      </Circle>
+   </VBox>
+   <Line endY="20.0" layoutX="124.0" layoutY="20.0" startY="3.0" />
+   <Label fx:id="requestIDLabel" layoutX="345.0" layoutY="23.0" maxWidth="178.0" styleClass="reqs_amount_lbl" text="850" />
+   <Label layoutX="385.0" layoutY="17.0" maxWidth="146.0" styleClass="reqs_label" text="Simulation Name:" />
+   <Label fx:id="simulationNameLabel" layoutX="495.0" layoutY="23.0" maxWidth="178.0" styleClass="reqs_amount_lbl" text="master" />
+   <Label layoutX="656.0" layoutY="17.0" maxWidth="146.0" styleClass="reqs_label" text="Status:" />
+   <Label fx:id="statusLabel" layoutX="709.0" layoutY="17.0" maxWidth="178.0" styleClass="reqs_request_status_value" text="Waiting" />
+   <Label layoutX="551.0" layoutY="17.0" maxWidth="146.0" styleClass="reqs_label" text="Amount:" />
+   <Label fx:id="amountLabel" layoutX="612.0" layoutY="23.0" maxWidth="178.0" styleClass="reqs_amount_lbl" text="850" />
+   <Label fx:id="viewTerminations" layoutX="787.0" layoutY="5.0" maxWidth="178.0" styleClass="reqs_amount_lbl" text="+">
+      <font>
+         <Font size="16.0" />
+      </font>
+   </Label>
+</AnchorPane>

@@ -1,0 +1,9 @@
+.execution_container {
+    -fx-background-color: #EEEEEE;
+}
+
+.execution_container Label {
+    -fx-fill: #000000;
+    -fx-font-size: 2em;
+    -fx-font-family: "Berlin Sans FB";
+}

@@ -1,0 +1,70 @@
+
+/* new Requests View */
+
+.new_query_container {
+    -fx-background-color: #EEEEEE;
+    -fx-padding: 0 10 20 10 ;
+    -fx-spacing: 10;
+}
+
+.new_query_container Label {
+    -fx-font-family: "Berlin Sans FB";
+    -fx-font-size: 1.3em;
+}
+.new_query_container TextField {
+    -fx-pref-height: 20;
+    -fx-pref-width: 140;
+    -fx-background-color: #FFFFFF;
+    -fx-effect: dropshadow(three-pass-box,#AAAAAA,3,0,0,3);
+}
+.new_query_container Button {
+    -fx-background-color: linear-gradient(to right , rgba(30, 118, 181, 0.79), #1e40c6);
+    -fx-effect: dropshadow(three-pass-box,#AAAAAA,3,0,0,3);
+    -fx-pref-width: 150;
+    -fx-font-size: 1.5em;
+    -fx-font-family: "Berlin Sans FB";
+    -fx-text-fill: #FFFFFF;
+}
+
+.new_query_container Button:hover{
+    -fx-cursor: hand;
+}
+
+/* Transactions View */
+.allocations_container {
+    -fx-background-color: #EEEEEE;
+}
+
+.allocations_container Text {
+    -fx-fill: #000000;
+    -fx-font-size: 1.5em;
+    -fx-font-family: "Berlin Sans FB";
+}
+
+.allocations_container .list-view {
+    -fx-background-color: #EEEEEE;
+    -fx-padding: 10;
+}
+
+.allocations_container .list-cell {
+    -fx-background-color: #EEEEEE;
+    -fx-pref-width: 800;
+}
+
+.buttons_container Button {
+    -fx-background-color: linear-gradient(to right , rgba(90, 181, 30, 0.79), #1ec661);
+    -fx-effect: dropshadow(three-pass-box,#AAAAAA,3,0,0,3);
+    -fx-pref-width: 150;
+    -fx-font-size: 1.5em;
+    -fx-font-family: "Berlin Sans FB";
+    -fx-text-fill: #FFFFFF;
+}
+
+.decline_container Button {
+    -fx-background-color: linear-gradient(to right ,  rgba(181, 30, 50, 0.79), #c61e41);
+    -fx-effect: dropshadow(three-pass-box,#AAAAAA,3,0,0,3);
+    -fx-pref-width: 150;
+    -fx-font-size: 1.5em;
+    -fx-font-family: "Berlin Sans FB";
+    -fx-text-fill: #FFFFFF;
+}

@@ -1,0 +1,154 @@
+.button.control {
+    /* Default background color */
+    -fx-background-radius: 100; /* Make the button slightly round */
+    -fx-padding: 5 10 5 10; /* Adjust padding to make the button smaller */
+    -fx-text-fill: white; /* Text color */
+    -fx-font-size: 14px; /* Font size */
+
+    /* Add a smooth transition for color change when hovering */
+    -fx-background-insets: 0, 1;
+    -fx-background-color: #2980b9;
+}
+
+.button.control:hover {
+    -fx-background-color: #1d5c8f; /* New background color (dark blue) when hovered */
+}
+
+.button.rerun {
+    /* Default background color */
+    -fx-background-radius: 100; /* Make the button slightly round */
+    -fx-padding: 5 10 5 10; /* Adjust padding to make the button smaller */
+    -fx-text-fill: white; /* Text color */
+    -fx-font-size: 14px; /* Font size */
+
+    /* Add a smooth transition for color change when hovering */
+    -fx-background-insets: 0, 1;
+    -fx-background-color: #29b94b;
+}
+
+.button.rerun:hover {
+    -fx-background-color: #1d8f27; /* New background color (dark blue) when hovered */
+}
+
+/* MenuButton - Bright Gray and Dark Gray */
+.menu-button {
+    -fx-background-color: #ff6978bc; /* Default background color (bright gray) */
+    -fx-padding: 2 5 2 5; /* Adjust padding to make the button smaller */
+    -fx-text-fill: white; /* Text color */
+    -fx-font-size: 14px; /* Font size */
+
+    /* Add a smooth transition for color change when hovering */
+    -fx-background-insets: 0, 1;
+    -fx-background-radius: 50;
+}
+
+.menu-button:hover {
+    -fx-background-color: rgba(206, 0, 21, 0.697)bc; /* Even darker gray when hovered */
+}
+
+/* Style for LineChart */
+.chart-line-symbol {
+    -fx-background-color: #ff5733, white;
+}
+
+.chart-legend {
+    -fx-background-color: rgba(255, 255, 255, 0.8);
+    -fx-padding: 5px;
+    -fx-border-color: #ccc;
+    -fx-border-radius: 5px;
+}
+
+.chart-legend-item {
+    -fx-padding: 5px;
+}
+
+.chart-legend-item-symbol {
+    -fx-background-color: transparent; /* Hide the default symbol */
+    -fx-background-insets: 0, 0 0 0 5; /* Adjust spacing */
+    -fx-shape: null; /* Remove the default shape */
+}
+
+.chart-legend {
+    -fx-background-color: rgba(255, 255, 255, 0.8);
+    -fx-padding: 5px;
+    -fx-border-color: #ccc;
+    -fx-border-radius: 5px;
+}
+
+/* Define a unique color for each series in the legend */
+.series0.chart-legend-item-symbol {
+    -fx-background-color: #0015ff;
+}
+
+.series1.chart-legend-item-symbol {
+    -fx-background-color: #ff0000;
+}
+
+.series2.chart-legend-item-symbol {
+    -fx-background-color: #1aff00;
+}
+
+.series3.chart-legend-item-symbol {
+    -fx-background-color: #d000ff;
+}
+
+.series4.chart-legend-item-symbol {
+    -fx-background-color: #ffd500;
+}
+
+.chart-title {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+}
+
+.chart-plot-background {
+    -fx-background-color: white;
+}
+
+.chart-vertical-grid-lines {
+    -fx-stroke: #ddd;
+}
+
+.chart-horizontal-grid-lines {
+    -fx-stroke: #ddd;
+}
+
+.chart-alternative-row-fill {
+    -fx-background-color: #f9f9f9;
+}
+
+.default-color0.chart-series-line { -fx-stroke: #0015ff; }
+.default-color1.chart-series-line { -fx-stroke: #ff0000; }
+.default-color2.chart-series-line { -fx-stroke: #1aff00; }
+.default-color3.chart-series-line { -fx-stroke: #d000ff; }
+.default-color4.chart-series-line { -fx-stroke: #ffd500; }
+
+/* Style for BarChart */
+.chart-bar {
+    -fx-bar-fill: #0070CC; /* Blue color */
+}
+
+.chart-legend {
+    -fx-opacity: 0; /* Hide legend */
+}
+
+.chart-title {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+}
+
+.chart-plot-background {
+    -fx-background-color: white;
+}
+
+.chart-vertical-grid-lines {
+    -fx-stroke: #ddd;
+}
+
+.chart-horizontal-grid-lines {
+    -fx-stroke: #ddd;
+}
+
+.chart-alternative-row-fill {
+    -fx-background-color: #f9f9f9;
+}

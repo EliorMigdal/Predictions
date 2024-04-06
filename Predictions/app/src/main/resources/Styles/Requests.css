@@ -1,0 +1,60 @@
+
+/* new Requests View */
+
+.new_req_container {
+    -fx-background-color: #EEEEEE;
+    -fx-padding: 0 10 20 10 ;
+    -fx-spacing: 15;
+}
+
+.new_req_container Label {
+    -fx-font-family: "Berlin Sans FB";
+    -fx-font-size: 1.3em;
+}
+.new_req_container TextField {
+    -fx-pref-height: 20;
+    -fx-pref-width: 80;
+    -fx-background-color: #FFFFFF;
+    -fx-effect: dropshadow(three-pass-box,#AAAAAA,3,0,0,3);
+}
+
+.new_req_container Button {
+    -fx-background-color: linear-gradient(to right ,  rgba(181, 30, 50, 0.79), #c61e41);
+    -fx-effect: dropshadow(three-pass-box,#AAAAAA,3,0,0,3);
+    -fx-pref-width: 230;
+    -fx-font-size: 1.5em;
+    -fx-font-family: "Berlin Sans FB";
+    -fx-text-fill: #FFFFFF;
+}
+
+.new_req_container Button:hover{
+    -fx-cursor: hand;
+    -fx-background-color: #d08f8f ;
+}
+
+/* Transactions View */
+.requests_container {
+    -fx-background-color: #EEEEEE;
+}
+
+.requests_container Text {
+    -fx-fill: #000000;
+    -fx-font-size: 1.4em;
+    -fx-font-family: "Berlin Sans FB";
+}
+
+.requests_container .list-view {
+    -fx-background-color: #EEEEEE;
+    -fx-padding: 10;
+}
+
+.requests_container .list-cell {
+    -fx-background-color: #EEEEEE;
+    -fx-pref-width: 800;
+}
+
+.requests_container CheckBox {
+    -fx-fill: #000000;
+    -fx-font-size: 1.4em;
+    -fx-font-family: "Berlin Sans FB";
+}

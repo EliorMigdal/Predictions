@@ -1,0 +1,40 @@
+.popUpContainer {
+    -fx-background-color: #EEEEEE;
+}
+
+.list-view {
+    -fx-background-color: #EEEEEE;
+    -fx-padding: 10;
+}
+
+.list-cell {
+    -fx-background-color: #EEEEEE;
+}
+
+.startButton Button {
+    -fx-background-color: linear-gradient(to right , rgba(85, 181, 30, 0.79), #2fc61e);
+    -fx-effect: dropshadow(three-pass-box,#AAAAAA,3,0,0,3);
+    -fx-pref-width: 100;
+    -fx-font-size: 14px;
+    -fx-font-family: "Berlin Sans FB";
+    -fx-text-fill: #FFFFFF;
+}
+
+.changeButton Button {
+    -fx-background-color: linear-gradient(to right , rgba(181, 121, 30, 0.79), #c65e1e);
+    -fx-effect: dropshadow(three-pass-box,#AAAAAA,3,0,0,3);
+    -fx-pref-width: 100;
+    -fx-font-size: 14px;
+    -fx-font-family: "Berlin Sans FB";
+    -fx-text-fill: #FFFFFF;
+}
+
+.changeButton Button:hover{
+    -fx-cursor: hand;
+    -fx-background-color: #d0b28f;
+}
+
+.startButton Button:hover{
+    -fx-cursor: hand;
+    -fx-background-color: #8fd094;
+}

@@ -1,0 +1,11 @@
+.execution_container Label {
+    -fx-fill: #000000;
+    -fx-font-size: 13px;
+    -fx-font-family: "Berlin Sans FB";
+}
+
+.background-image {
+    -fx-background-image: url("../Images/whiteBackground.jpg");
+    -fx-background-size: 280 280;
+    -fx-effect: dropshadow(three-pass-box, grey, 10, 0.5, 0, 0);
+}

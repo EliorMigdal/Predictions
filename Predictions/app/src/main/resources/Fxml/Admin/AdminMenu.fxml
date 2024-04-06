@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox prefHeight="750.0" prefWidth="257.0" spacing="10.0" styleClass="main_menu_container" stylesheets="@../../Styles/ClientMenu.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="predictions.controllers.admin.AdminMenuController">
+    <AnchorPane prefHeight="713.0" prefWidth="257.0" styleClass="left_container">
+        <VBox prefHeight="98.0" prefWidth="249.0" styleClass="title_container" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <AnchorPane>
+            <children>
+               <ImageView fitHeight="38.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                     <Image url="@../../Images/adminIcon.png" />
+                  </image>
+               </ImageView>
+            </children>
+         </AnchorPane>
+            <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                <image>
+                    <Image url="@../../Images/applicationIcon.png" />
+                </image>
+            </ImageView>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Predictions" />
+        </VBox>
+        <VBox layoutY="127.0" prefHeight="501.0" prefWidth="264.0" styleClass="menu_container">
+            <VBox prefHeight="262.0" prefWidth="234.0" spacing="5.0">
+                <HBox>
+                    <VBox.margin>
+                        <Insets left="10.0" />
+                    </VBox.margin>
+                    <Label prefHeight="40.0" prefWidth="150.0" text="Browse">
+                        <font>
+                            <Font name="Berlin Sans FB" size="18.0" />
+                        </font>
+                    </Label>
+                </HBox>
+                <HBox fx:id="Management_btn" alignment="CENTER" onMouseClicked="#showManagement" prefHeight="50.0" prefWidth="200.0" spacing="15.0" style="-fx-cursor: hand;" stylesheets="@../../Styles/Styles.css">
+                    <ImageView fitHeight="37.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                            <Image url="@../../Images/manegmentIcon.png" />
+                        </image>
+                  <HBox.margin>
+                     <Insets />
+                  </HBox.margin>
+                    </ImageView>
+                    <Label prefHeight="38.0" prefWidth="167.0" text="Management">
+                        <font>
+                            <Font name="Berlin Sans FB" size="18.0" />
+                        </font>
+                    </Label>
+               <styleClass>
+                  <String fx:value="mouse-moved" />
+                  <String fx:value="selected" />
+               </styleClass>
+                </HBox>
+            <HBox fx:id="thread_management_btn" alignment="CENTER" onMouseClicked="#showThreadManagement" prefHeight="50.0" prefWidth="200.0" spacing="15.0" style="-fx-cursor: hand;" styleClass="mouse-moved" stylesheets="@../../Styles/Styles.css">
+               <children>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../Images/detailsImg.png" />
+                     </image>
+                  </ImageView>
+                  <Label prefHeight="38.0" prefWidth="167.0" text="Thread Management">
+                     <font>
+                        <Font name="Berlin Sans FB" size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+                <HBox fx:id="allocations_btn" alignment="CENTER" onMouseClicked="#showAllocations" prefHeight="50.0" prefWidth="200.0" spacing="15.0" style="-fx-cursor: hand;" styleClass="mouse-moved" stylesheets="@../../Styles/Styles.css">
+                    <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                            <Image url="@../../Images/threadsQueueImg.png" />
+                        </image>
+                    </ImageView>
+                    <Label prefHeight="38.0" prefWidth="167.0" text="Allocations">
+                        <font>
+                            <Font name="Berlin Sans FB" size="18.0" />
+                        </font>
+                    </Label>
+                </HBox>
+                <HBox fx:id="executeHistory_btn" alignment="CENTER" layoutX="10.0" layoutY="163.0" onMouseClicked="#showExecutionHistory" prefHeight="50.0" prefWidth="200.0" spacing="15.0" style="-fx-cursor: hand;" styleClass="mouse-moved" stylesheets="@../../Styles/Styles.css">
+                    <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                            <Image url="@../../Images/resultsImg.png" />
+                        </image>
+                    </ImageView>
+                    <Label prefHeight="38.0" prefWidth="167.0" text="Execution History">
+                        <font>
+                            <Font name="Berlin Sans FB" size="18.0" />
+                        </font>
+                    </Label>
+                </HBox>
+            </VBox>
+            <Separator prefHeight="12.0" prefWidth="249.0" />
+            <VBox maxWidth="-Infinity" prefHeight="93.0" prefWidth="130.0" spacing="13.0">
+                <VBox.margin>
+                    <Insets left="40.0" />
+                </VBox.margin>
+                <HBox fx:id="profile_btn" alignment="CENTER" onMouseClicked="#showProfile" prefHeight="60.0" prefWidth="196.0" spacing="15.0">
+                    <opaqueInsets>
+                        <Insets />
+                    </opaqueInsets>
+                    <children>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../../Images/entityImg.png" />
+                            </image>
+                        </ImageView>
+                        <Label prefHeight="38.0" prefWidth="60.0" text="Profile">
+                            <font>
+                                <Font name="Berlin Sans FB" size="18.0" />
+                            </font>
+                        </Label>
+                    </children>
+               <styleClass>
+                  <String fx:value="admin_alt_menu_btn" />
+                  <String fx:value="mouse-moved" />
+               </styleClass>
+                </HBox>
+                <HBox fx:id="logout_btn" alignment="CENTER" onMouseClicked="#onLogout" prefHeight="60.0" prefWidth="249.0" spacing="15.0">
+                    <opaqueInsets>
+                        <Insets />
+                    </opaqueInsets>
+                    <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                            <Image url="@../../Images/logoutIcon.png" />
+                        </image>
+                        <HBox.margin>
+                            <Insets left="5.0" />
+                        </HBox.margin>
+                    </ImageView>
+                    <Label prefHeight="38.0" prefWidth="61.0" text="Logout">
+                        <font>
+                            <Font name="Berlin Sans FB" size="18.0" />
+                        </font>
+                    </Label>
+               <styleClass>
+                  <String fx:value="admin_alt_menu_btn" />
+                  <String fx:value="mouse-moved" />
+               </styleClass>
+                </HBox>
+            </VBox>
+        </VBox>
+        <HBox prefHeight="23.0" prefWidth="250.0" spacing="5.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="689.0">
+            <ImageView fitHeight="24.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                <image>
+                    <Image url="@../../Images/copyright.png" />
+                </image>
+            </ImageView>
+            <Label prefHeight="17.0" prefWidth="213.0" text="2023 Ben Cohen &amp; Elior Migdal">
+                <HBox.margin>
+                    <Insets top="3.0" />
+                </HBox.margin>
+                <font>
+                    <Font name="Berlin Sans FB" size="16.0" />
+                </font>
+            </Label>
+        </HBox>
+    </AnchorPane>
+</VBox>

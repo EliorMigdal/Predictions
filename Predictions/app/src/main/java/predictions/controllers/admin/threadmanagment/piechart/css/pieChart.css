@@ -1,0 +1,45 @@
+/* Set the chart background color */
+.chart {
+    -fx-background-color: transparent;
+}
+
+/* Style the chart title */
+.chart-title {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+}
+
+/* Style the legend */
+.chart-legend {
+    -fx-font-size: 14px;
+}
+
+/* Style the pie chart slices */
+.chart-pie {
+    -fx-pie-label-visible: true; /* Show labels on the pie slices */
+    -fx-pie-label-distance: 0.8em; /* Adjust the distance of labels from slices */
+    -fx-pie-label-text-fill: white; /* Label text color */
+}
+
+/* Style the pie chart data labels */
+.chart-pie-label {
+    -fx-font-size: 12px;
+}
+
+.chart-label {
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+/* Style the pie chart slice colors */
+.chart-pie-chart-item {
+    -fx-pie-colors: #90ee90, #ffa500, #ffdb58,#ff5733 #36c4f0, #9370db, #ff69b4;
+}
+
+/* Style the pie chart slice hover effect */
+.chart-pie-hover-line {
+    -fx-stroke: #000000; /* Line color on hover */
+    -fx-stroke-width: 2px; /* Line thickness on hover */
+    -fx-stroke-dash-array: 2 4; /* Line dash pattern on hover */
+}

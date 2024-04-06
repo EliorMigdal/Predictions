@@ -1,0 +1,15 @@
+.round-cell {
+    -fx-background-color: #3498db; /* Set the background color */
+    -fx-background-radius: 20%; /* Make the background circular */
+    -fx-min-width: 250px; /* Set the minimum width */
+    -fx-min-height: 30px; /* Set the minimum height */
+    -fx-max-width: 250px; /* Set the maximum width */
+    -fx-max-height: 30px; /* Set the maximum height */
+    -fx-border-color: #2980b9; /* Set the border color */
+    -fx-border-radius: 50%; /* Make the border circular */
+    -fx-border-width: 2px; /* Set the border width */
+    -fx-alignment: center; /* Center the content within the cell */
+    -fx-text-fill: #ffffff; /* Set the text color */
+    -fx-font-weight: bold; /* Set text to bold (optional) */
+}
+

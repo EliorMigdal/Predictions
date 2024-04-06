@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="164.0" prefWidth="307.0" style="-fx-border-color: #191919;" stylesheets="@../../../Styles/Styles.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="predictions.controllers.mutual.details.properties.controllers.ActionPropertyCardController">
+   <center>
+      <GridPane prefHeight="123.0" prefWidth="248.0" BorderPane.alignment="CENTER">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="186.3333740234375" minWidth="10.0" prefWidth="140.3333740234375" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="59.66668701171875" minWidth="0.0" prefWidth="0.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="182.0" minWidth="10.0" prefWidth="157.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="72.6666259765625" minWidth="0.0" prefWidth="0.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints maxHeight="97.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="97.0" minHeight="1.6666259765625" prefHeight="1.6666259765625" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="97.0" minHeight="10.0" prefHeight="24.3333740234375" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="97.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="97.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="97.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="97.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="97.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="97.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="97.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="97.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="97.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="97.0" minHeight="0.0" prefHeight="7.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="70.0" minHeight="0.0" prefHeight="0.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="68.0" minHeight="0.0" prefHeight="4.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="22.666656494140625" minHeight="0.0" prefHeight="0.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="50.0" minHeight="0.0" prefHeight="0.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="22.666656494140625" minHeight="0.0" prefHeight="2.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="22.666656494140625" minHeight="0.0" prefHeight="0.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Label fx:id="firstRowLeft" prefWidth="176.0" GridPane.rowIndex="1">
+               <padding>
+                  <Insets left="8.0" />
+               </padding>
+               <font>
+                  <Font name="Berlin Sans FB" size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="secondRowLeft" prefWidth="176.0" GridPane.rowIndex="3">
+               <padding>
+                  <Insets left="8.0" />
+               </padding>
+               <font>
+                  <Font name="Berlin Sans FB" size="16.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="5.0" />
+               </GridPane.margin>
+            </Label>
+            <Label fx:id="thirdRowLeft" prefWidth="176.0" GridPane.rowIndex="4">
+               <padding>
+                  <Insets left="8.0" />
+               </padding>
+               <font>
+                  <Font name="Berlin Sans FB" size="16.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="5.0" />
+               </GridPane.margin>
+            </Label>
+            <Label fx:id="fourthRowLeft" prefWidth="176.0" GridPane.rowIndex="5">
+               <padding>
+                  <Insets left="8.0" />
+               </padding>
+               <font>
+                  <Font name="Berlin Sans FB" size="16.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="5.0" />
+               </GridPane.margin>
+            </Label>
+            <Label fx:id="fifthRowLeft" prefWidth="176.0" GridPane.rowIndex="6">
+               <padding>
+                  <Insets left="8.0" />
+               </padding>
+               <font>
+                  <Font name="Berlin Sans FB" size="16.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="5.0" />
+               </GridPane.margin>
+            </Label>
+            <Label fx:id="sixthRowLeft" prefWidth="176.0" GridPane.rowIndex="7">
+               <padding>
+                  <Insets left="8.0" />
+               </padding>
+               <font>
+                  <Font name="Berlin Sans FB" size="16.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="5.0" />
+               </GridPane.margin>
+            </Label>
+            <Label fx:id="seventhRowLeft" prefWidth="176.0" GridPane.rowIndex="8">
+               <padding>
+                  <Insets left="8.0" />
+               </padding>
+               <font>
+                  <Font name="Berlin Sans FB" size="16.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="5.0" />
+               </GridPane.margin>
+            </Label>
+            <Label fx:id="eighthRowLeft" prefWidth="176.0" GridPane.rowIndex="9">
+               <padding>
+                  <Insets left="8.0" />
+               </padding>
+               <font>
+                  <Font name="Berlin Sans FB" size="16.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="5.0" />
+               </GridPane.margin>
+            </Label>
+            <Label fx:id="ningthRowLeft" prefWidth="176.0" GridPane.rowIndex="10">
+               <padding>
+                  <Insets left="8.0" />
+               </padding>
+               <font>
+                  <Font name="Berlin Sans FB" size="16.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="5.0" />
+               </GridPane.margin>
+            </Label>
+            <Label fx:id="tenthRowLeft" prefWidth="176.0" GridPane.rowIndex="11">
+               <padding>
+                  <Insets left="8.0" />
+               </padding>
+               <font>
+                  <Font name="Berlin Sans FB" size="16.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="5.0" />
+               </GridPane.margin>
+            </Label>
+            <Label fx:id="firstRowRight" prefHeight="19.0" prefWidth="160.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
+               <font>
+                  <Font name="Berlin Sans FB" size="16.0" />
+               </font>
+               <padding>
+                  <Insets right="45.0" />
+               </padding>
+            </Label>
+            <Label fx:id="secondRowRight" prefHeight="19.0" prefWidth="160.0" GridPane.columnIndex="2" GridPane.rowIndex="3">
+               <font>
+                  <Font name="Berlin Sans FB" size="16.0" />
+               </font>
+               <padding>
+                  <Insets right="45.0" />
+               </padding>
+            </Label>
+            <Label fx:id="thirdRowRight" prefHeight="19.0" prefWidth="160.0" GridPane.columnIndex="2" GridPane.rowIndex="4">
+               <font>
+                  <Font name="Berlin Sans FB" size="16.0" />
+               </font>
+               <padding>
+                  <Insets right="45.0" />
+               </padding>
+            </Label>
+            <Label fx:id="fourthRowRight" prefHeight="19.0" prefWidth="160.0" textOverrun="LEADING_WORD_ELLIPSIS" GridPane.columnIndex="2" GridPane.rowIndex="5">
+               <font>
+                  <Font name="Berlin Sans FB" size="16.0" />
+               </font>
+               <padding>
+                  <Insets right="45.0" />
+               </padding>
+            </Label>
+            <Label fx:id="fifthRowRight" prefHeight="19.0" prefWidth="171.0" GridPane.columnIndex="2" GridPane.rowIndex="6">
+               <font>
+                  <Font name="Berlin Sans FB" size="16.0" />
+               </font>
+               <padding>
+                  <Insets right="45.0" />
+               </padding>
+            </Label>
+            <Label fx:id="sixthRowRight" prefHeight="19.0" prefWidth="160.0" GridPane.columnIndex="2" GridPane.rowIndex="7">
+               <font>
+                  <Font name="Berlin Sans FB" size="16.0" />
+               </font>
+               <padding>
+                  <Insets right="45.0" />
+               </padding>
+            </Label>
+            <Label fx:id="seventhRowRight" prefHeight="19.0" prefWidth="160.0" GridPane.columnIndex="2" GridPane.rowIndex="8">
+               <font>
+                  <Font name="Berlin Sans FB" size="16.0" />
+               </font>
+               <padding>
+                  <Insets right="45.0" />
+               </padding>
+            </Label>
+            <Label fx:id="eighthRowRight" prefHeight="19.0" prefWidth="160.0" GridPane.columnIndex="2" GridPane.rowIndex="9">
+               <font>
+                  <Font name="Berlin Sans FB" size="16.0" />
+               </font>
+               <padding>
+                  <Insets right="45.0" />
+               </padding>
+            </Label>
+            <Label fx:id="ninghtRowRight" prefHeight="19.0" prefWidth="160.0" GridPane.columnIndex="2" GridPane.rowIndex="10">
+               <font>
+                  <Font name="Berlin Sans FB" size="16.0" />
+               </font>
+               <padding>
+                  <Insets right="45.0" />
+               </padding>
+            </Label>
+            <Label fx:id="tenthRowRight" prefHeight="19.0" prefWidth="160.0" GridPane.columnIndex="2" GridPane.rowIndex="11">
+               <font>
+                  <Font name="Berlin Sans FB" size="16.0" />
+               </font>
+               <padding>
+                  <Insets right="45.0" />
+               </padding>
+            </Label>
+         </children>
+      </GridPane>
+   </center>
+   <styleClass>
+      <String fx:value="transparent" />
+      <String fx:value="background-image2" />
+   </styleClass>
+</BorderPane>

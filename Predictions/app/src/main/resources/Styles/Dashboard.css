@@ -1,0 +1,110 @@
+.dashboard {
+    -fx-background-color: #EEEEEE;
+}
+
+.user_name {
+    -fx-font-size: 2.6em;
+    -fx-font-family: "Berlin Sans FB";
+}
+
+.date_lbl {
+    -fx-text-fill: #AAAAAA;
+    -fx-font-size: 1.1em;
+    -fx-font-family: "Berlin Sans FB";
+}
+
+.section_title {
+    -fx-font-size: 1.4em;
+    -fx-font-family: "Berlin Sans FB";
+}
+/* Requests Summary */
+
+.summary_view {
+ -fx-background-color: #FFFFFF;
+ -fx-padding: 5 10 5 10;
+    -fx-spacing:  5;
+    -fx-alignment: center_left;
+}
+
+.req_summary_container {
+    -fx-padding: 5;
+    -fx-spacing: 5;
+    -fx-alignment: center_left;
+    -fx-border-radius: 5;
+    -fx-border-color: #999999;
+    -fx-border-width: 1;
+    -fx-border-style: dashed;
+}
+
+.req_summary_container Line {
+    -fx-stroke:  #AAAAAA;
+}
+
+.req_waiting {
+    -fx-text-fill: rgba(235, 203, 16, 0.79);
+    -fx-font-family: "Berlin Sans FB";
+    -fx-font-size: 1.5em;
+}
+
+.req_declined {
+    -fx-text-fill: rgba(235, 16, 16, 0.79);
+    -fx-font-family: "Berlin Sans FB";
+    -fx-font-size: 1.5em;
+}
+
+.req_approved {
+    -fx-text-fill: rgba(45, 235, 16, 0.79);
+    -fx-font-family: "Berlin Sans FB";
+    -fx-font-size: 1.5em;
+}
+
+/* Transactions View */
+
+.transaction_listview {
+    -fx-background-color: #EEEEEE;
+    -fx-border-width: 0 0 0 0;
+    -fx-border-color: #AAAAAA;
+}
+
+.transaction_listview .scroll-bar:vertical {
+    -fx-scale-x: 0;
+}
+
+.list-cell {
+    -fx-background-color: #EEEEEE;
+    -fx-padding: 15 0 15 0;
+}
+
+
+
+/* new Requests View */
+
+.new_req_container {
+    -fx-background-color: #EEEEEE;
+    -fx-padding: 0 10 20 10 ;
+    -fx-spacing: 10;
+    -fx-alignment: center_left;
+}
+
+.new_req_container Label {
+    -fx-font-family: "Berlin Sans FB";
+    -fx-font-size: 1.3em;
+}
+.new_req_container TextField {
+    -fx-pref-height: 40;
+    -fx-background-color: #FFFFFF;
+    -fx-effect: dropshadow(three-pass-box,#AAAAAA,3,0,0,3);
+}
+.new_req_container Button {
+    -fx-background-color: linear-gradient(to right ,  rgba(181, 30, 50, 0.79), #c61e41);
+    -fx-effect: dropshadow(three-pass-box,#AAAAAA,3,0,0,3);
+    -fx-pref-width: 230;
+    -fx-font-size: 1.5em;
+    -fx-font-family: "Berlin Sans FB";
+    -fx-text-fill: #FFFFFF;
+}
+.new_req_container Button:hover{
+    -fx-cursor: hand;
+    -fx-background-color: #fd8888;
+
+}

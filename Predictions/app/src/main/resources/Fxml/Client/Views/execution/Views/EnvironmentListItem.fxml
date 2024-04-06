@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane minHeight="20.0" prefHeight="20.0" prefWidth="200.0" styleClass="popup-list-cell" stylesheets="@../../../../../Styles/PopupListItem.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1">
+    <Label fx:id="propertyNameLabel" layoutX="10.0" layoutY="2.0" text="Property Name">
+        <font>
+            <Font name="Berlin Sans FB" size="13.0" />
+        </font>
+    </Label>
+    <Label fx:id="valueLabel" layoutX="139.0" layoutY="2.0" text="Value">
+        <font>
+            <Font name="Berlin Sans FB" size="13.0" />
+        </font>
+    </Label>
+    <Line endX="4.9999847412109375" endY="-7.026126861572266" fill="#d0d0d0" layoutX="111.0" layoutY="26.0" startX="4.999992370605469" startY="-25.0" stroke="#d7d7d7" />
+</AnchorPane>

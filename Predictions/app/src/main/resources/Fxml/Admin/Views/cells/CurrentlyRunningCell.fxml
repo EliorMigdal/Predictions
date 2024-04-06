@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="requestsCell" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="60.0" prefWidth="300.0" styleClass="cell_container" stylesheets="@../../../../Styles/AdminRequestsCell.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <Label layoutX="12.0" layoutY="17.0" maxWidth="114.0" prefHeight="27.0" prefWidth="107.0" styleClass="reqs_label" text="Simulation Name:" />
+   <Label fx:id="simulationNameLabel" layoutX="127.0" layoutY="23.0" maxWidth="-Infinity" prefHeight="17.0" prefWidth="42.0" styleClass="reqs_amount_lbl" text="master" />
+   <Label layoutX="181.0" layoutY="17.0" maxWidth="114.0" prefHeight="27.0" prefWidth="75.0" styleClass="reqs_label" text="Request ID:" />
+   <Label fx:id="requestIDLabel" layoutX="261.0" layoutY="22.0" maxWidth="-Infinity" prefHeight="17.0" prefWidth="34.0" styleClass="reqs_amount_lbl" text="850" />
+</AnchorPane>

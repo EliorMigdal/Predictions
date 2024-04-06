@@ -1,0 +1,25 @@
+
+.requests_container {
+    -fx-background-color: #EEEEEE;
+}
+
+.requests_container Text {
+    -fx-fill: #000000;
+    -fx-font-size: 2.5em;
+    -fx-font-family: "Berlin Sans FB";
+}
+
+.requests_container .list-view {
+    -fx-background-color: #EEEEEE;
+    -fx-padding: 10;
+}
+.list-view .scroll-bar:horizontal .increment-arrow,
+.list-view .scroll-bar:horizontal .decrement-arrow,
+.list-view .scroll-bar:horizontal .increment-button,
+.list-view .scroll-bar:horizontal .decrement-button {
+    -fx-padding:0;
+}
+.requests_container .list-cell {
+    -fx-background-color: #EEEEEE;
+    -fx-pref-width: 800;
+}
